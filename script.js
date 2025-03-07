@@ -40,6 +40,12 @@ clearButton.addEventListener("click" , () => {
     calculatorDisplay.textContent = "0"
 })
 
+function finalizeDecimal() {
+    if(calculatorDisplay.textContent.endsWith(".")){
+        calculatorDisplay.textContent += "00"
+    }
+}
+
 tipButton.forEach(button => {
     button.addEventListener("click" , () => {
         billAmount = parseFloat(calculatorDisplay.textContent)
