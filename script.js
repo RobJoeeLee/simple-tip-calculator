@@ -5,3 +5,5 @@ const numberButton = document.querySelectorAll(".number")
 const decimalButton = document.querySelector(".decimal")
 const clearButton = document.querySelector(".clear")
 const tipButton = document.querySelectorAll(".tip-button")
+
+let shouldUpdateDisplay = false
