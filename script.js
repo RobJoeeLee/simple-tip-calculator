@@ -20,3 +20,18 @@ function updateDisplay(value) {
     }
     calculatorDisplay.textContent = calculatorDisplay.textContent === "0" ? value: calculatorDisplay.textContent + value
 }
+
+numberButton.forEach(button => {
+    button.addEventListener("click" , () => {
+        updateDisplay(button.dataset.number)
+    })
+})
+
+decimalButton.addEventListener("click" , () => {
+    if(calculatorDisplay.textContent.includes("."))return
+    if(calculatorDisplay.textContent === "0"){
+        calculatorDisplay.textContent = "0."
+        return
+    }
+    calculatorDisplay.textContent += "."
+})
