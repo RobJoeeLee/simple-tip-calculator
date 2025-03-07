@@ -35,3 +35,7 @@ decimalButton.addEventListener("click" , () => {
     }
     calculatorDisplay.textContent += "."
 })
+
+clearButton.addEventListener("click" , () => {
+    calculatorDisplay.textContent = "0"
+})
