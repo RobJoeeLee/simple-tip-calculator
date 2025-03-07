@@ -39,3 +39,17 @@ decimalButton.addEventListener("click" , () => {
 clearButton.addEventListener("click" , () => {
     calculatorDisplay.textContent = "0"
 })
+
+tipButton.forEach(button => {
+    button.addEventListener("click" , () => {
+        billAmount = parseFloat(calculatorDisplay.textContent)
+        if(isNaN(billAmount) || billAmount === 0)return
+
+        let tipPercentage = parseFloat(button.dataset.percent) / 100
+        let tipAmount = billAmount * tipPercentage
+        let totalWithTip = billAmount + tipAmount
+
+        tipDisplay.textContent = tipAmount.toFixed(2)
+        totalWithTipDisplay.textContent = totalWithTip.toFixed(2)
+    })
+})
