@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.calculator-display {
+    text-align: right;
+    background: rgb(169, 169, 169);
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.calculator {
+    border-radius: 10px;
+    background: rgb(61, 134, 245);
+    padding: 20px;
+    width: 300px;
+    max-width: 300px;
+    margin-top: -20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3px;
+}
+
+button {
+    font-size: 1.25em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.tip-button {
+    margin-top:20px;
+}
+
+.clear {
+    background-color: rgb(250, 86, 86);
+}
+
+.number:hover, .tip-button:hover, .decimal:hover {
+    background-color:rgb(222, 222, 222);
+}
+
+.number:active, .tip-button:active, .decimal:active {
+    background-color:rgb(192, 192, 192)
+}
+
+.clear:hover {
+    background-color: rgb(231, 80, 80);
+}
+
+.clear:active {
+    background-color: rgb(219, 77, 77);
+}
+
+.total-displays {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tip, .total-with-tip {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tip-display, .total-with-tip-display {
+    font-weight: normal;
+}
