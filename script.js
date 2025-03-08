@@ -38,6 +38,9 @@ decimalButton.addEventListener("click" , () => {
 
 clearButton.addEventListener("click" , () => {
     calculatorDisplay.textContent = "0"
+    tipDisplay.textContent = "0"
+    totalWithTipDisplay.textContent = "0"
+
 })
 
 function finalizeDecimal() {
